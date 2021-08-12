@@ -119,7 +119,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
     echo
     read -p "Do you want remove current AMD Drivers?(y/n)" -n 1 -r
     if [[ $REPLY =~ ^[Yy]$ ]]; then
-		/usr/bin/amdgpu-pro-uninstall
+		/usr/bin/amdgpu-pro-install --uninstall
 		apt-get remove vulkan-amdgpu-pro*
 	fi
 	cd amdgpu-pro-$version
